@@ -24,9 +24,12 @@ It allows users to enter text and listen to it in different voices supported by 
 ## 📂 Project Structure
 Text-to-Speech-Converter-Application/
 │── index.html # Main HTML file
+
 │── style.css # Styles (if added)
+
 │── script.js # JavaScript logic
-│── README.md # Project documentation
+
+│── README.md # Project documentationgit 
 
 ## ✨ Future Improvements
 - Add a **download option** to save speech as an audio file.
