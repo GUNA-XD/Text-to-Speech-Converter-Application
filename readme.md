@@ -23,6 +23,7 @@ It allows users to enter text and listen to it in different voices supported by 
 
 ## 📂 Project Structure
 Text-to-Speech-Converter-Application/
+
 │── index.html # Main HTML file
 
 │── style.css # Styles (if added)
