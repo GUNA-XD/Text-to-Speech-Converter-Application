@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-size: arial,sans-serif;
+            background-color: bisque;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+        #container{
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+        h1{
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #222;
+        }
+        textarea{
+            width: 100%;
+            height: 120px;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            outline:none;
+            resize:none;
+        }
+        button{
+            width: 100%;
+            padding: 15px;
+            background-color: rgb(104, 104, 225);
+            color: #fff;
+            border: none;
+            border-radius:4px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover{
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div>
+       <h1 id="container"><b>Text to Speech</b></h1>
+       <textarea id="texttospeak" placeholder="Enter a text..."></textarea>
+       <button onclick="speak()">Submit</button>
+    </div>
+
+    <script>
+        var speech = new SpeechSynthesisUtterance();
+
+        function speak(){
+
+        var texttospeak = document.getElementById('texttospeak').value;
+        if(texttospeak.trim() !== ""){
+            speech.text=texttospeak;
+            speech.rate=1;
+            speech.volume=10;
+            speech.pitch=1;
+            window.speechSynthesis.speak(speech);
+         } else{
+                alert('please enter some text..');
+            }
+        }
+    </script>
+</body>
+</html>
